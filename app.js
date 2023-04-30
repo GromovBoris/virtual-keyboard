@@ -634,55 +634,55 @@ const alt = document.getElementById("Alt");
 //   }
 // });
 
-// const capsLockDone = document.getElementById("buttonCapsLock");
+const capsLockDone = document.getElementById("buttonCapsLock");
 
-// capsLockDone.addEventListener("click", () => {
-//   if (cplck === "down" && lang === "en") {
-//     button.forEach((button) => {
-//       for (let i = 0; i < buttonKeys.length; i++) {
-//         if (
-//           button.id == buttonKeys[i].value &&
-//           button.classList.contains("letter")
-//         )
-//           button.innerHTML = buttonKeys[i].en_up;
-//         cplck = "up";
-//       }
-//     });
-//   } else if (cplck === "up" && lang === "en") {
-//     button.forEach((button) => {
-//       for (let i = 0; i < buttonKeys.length; i++) {
-//         if (
-//           button.id == buttonKeys[i].value &&
-//           button.classList.contains("letter")
-//         )
-//           button.innerHTML = buttonKeys[i].en_down;
-//         cplck = "down";
-//       }
-//     });
-//   } else if (cplck === "down" && lang === "ru") {
-//     button.forEach((button) => {
-//       for (let i = 0; i < buttonKeys.length; i++) {
-//         if (
-//           button.id == buttonKeys[i].value &&
-//           button.classList.contains("letter")
-//         )
-//           button.innerHTML = buttonKeys[i].ru_up;
-//         cplck = "up";
-//       }
-//     });
-//   } else if (cplck === "up" && lang === "ru") {
-//     button.forEach((button) => {
-//       for (let i = 0; i < buttonKeys.length; i++) {
-//         if (
-//           button.id == buttonKeys[i].value &&
-//           button.classList.contains("letter")
-//         )
-//           button.innerHTML = buttonKeys[i].ru_down;
-//         cplck = "down";
-//       }
-//     });
-//   }
-// });
+capsLockDone.addEventListener("click", () => {
+  if (cplck === "down" && lang === "en") {
+    button.forEach((button) => {
+      for (let i = 0; i < buttonKeys.length; i++) {
+        if (
+          button.id == buttonKeys[i].value &&
+          button.classList.contains("letter")
+        )
+          button.innerHTML = buttonKeys[i].en_up;
+        cplck = "up";
+      }
+    });
+  } else if (cplck === "up" && lang === "en") {
+    button.forEach((button) => {
+      for (let i = 0; i < buttonKeys.length; i++) {
+        if (
+          button.id == buttonKeys[i].value &&
+          button.classList.contains("letter")
+        )
+          button.innerHTML = buttonKeys[i].en_down;
+        cplck = "down";
+      }
+    });
+  } else if (cplck === "down" && lang === "ru") {
+    button.forEach((button) => {
+      for (let i = 0; i < buttonKeys.length; i++) {
+        if (
+          button.id == buttonKeys[i].value &&
+          button.classList.contains("letter")
+        )
+          button.innerHTML = buttonKeys[i].ru_up;
+        cplck = "up";
+      }
+    });
+  } else if (cplck === "up" && lang === "ru") {
+    button.forEach((button) => {
+      for (let i = 0; i < buttonKeys.length; i++) {
+        if (
+          button.id == buttonKeys[i].value &&
+          button.classList.contains("letter")
+        )
+          button.innerHTML = buttonKeys[i].ru_down;
+        cplck = "down";
+      }
+    });
+  }
+});
 
 // const symbolPrint = document.getElementsByClassName("symbol");
 
