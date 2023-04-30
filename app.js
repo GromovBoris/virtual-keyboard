@@ -1,3 +1,5 @@
+// import insertButtons from "./keys2.js";
+
 function keyboardCreate() {
   const body = document.querySelector("body");
   body.insertAdjacentHTML("afterbegin", '<div class="wrapper"></div>');
@@ -33,27 +35,657 @@ function keyboardCreate() {
   const keyboard = document.querySelector(".keyboard");
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button symbol" id="buttonBackquote" type="button">&grave;</button><button class="button symbol" id="button1" type="button">1</button><button class="button symbol" id="button2" type="button">2</button><button class="button symbol" id="button3" type="button">3</button><button class="button symbol" id="button4" type="button">4</button><button class="button symbol" id="button5" type="button">5</button><button class="button symbol" id="button6" type="button">6</button><button class="button symbol" id="button7" type="button">7</button><button class="button symbol" id="button8" type="button">8</button><button class="button symbol" id="button9" type="button">9</button><button class="button symbol" id="button0" type="button">0</button><button class="button symbol" id="buttonDash" type="button">-</button><button class="button symbol" id="buttonEqually" type="button">=</button><button class="button action" id="buttonBackspace" type="button">⟵</button>'
+    '<button class="button symbol" id="buttonBackquote" type="button"></button><button class="button symbol" id="button1" type="button"></button><button class="button symbol" id="button2" type="button"></button><button class="button symbol" id="button3" type="button"></button><button class="button symbol" id="button4" type="button"></button><button class="button symbol" id="button5" type="button"></button><button class="button symbol" id="button6" type="button"></button><button class="button symbol" id="button7" type="button"></button><button class="button symbol" id="button8" type="button"></button><button class="button symbol" id="button9" type="button"></button><button class="button symbol" id="button0" type="button"></button><button class="button symbol" id="buttonDash" type="button"></button><button class="button symbol" id="buttonEqually" type="button"></button><button class="button action" id="buttonBackspace" type="button"></button>'
   );
 
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action" id="buttonTab" type="button">Tab</button><button class="button symbol" id="buttonQ" type="button">q</button><button class="button symbol" id="buttonW" type="button">w</button><button class="button symbol" id="buttonE" type="button">e</button><button class="button symbol" id="buttonR" type="button">r</button><button class="button symbol" id="buttonT" type="button">t</button><button class="button symbol" id="buttonY" type="button">y</button><button class="button symbol" id="buttonU" type="button">u</button><button class="button symbol" id="buttonI" type="button">i</button><button class="button symbol" id="buttonO" type="button">o</button><button class="button symbol" id="buttonP" type="button">p</button><button class="button symbol" id="buttonOpenSquareBracket" type="button">[</button><button class="button symbol" id="buttonCloseSquareBracket" type="button">]</button><button class="button action" id="buttonBackSlash" type="button">&bsol;</button>'
+    '<button class="button action" id="buttonTab" type="button"></button><button class="button symbol letter" id="buttonQ" type="button"></button><button class="button symbol letter" id="buttonW" type="button"></button><button class="button symbol letter" id="buttonE" type="button"></button><button class="button symbol letter" id="buttonR" type="button"></button><button class="button symbol letter" id="buttonT" type="button"></button><button class="button symbol letter" id="buttonY" type="button"></button><button class="button symbol letter" id="buttonU" type="button"></button><button class="button symbol letter" id="buttonI" type="button"></button><button class="button symbol letter" id="buttonO" type="button"></button><button class="button symbol letter" id="buttonP" type="button"></button><button class="button symbol" id="buttonOpenSquareBracket" type="button"></button><button class="button symbol" id="buttonCloseSquareBracket" type="button"></button><button class="button action" id="buttonBackSlash" type="button"></button>'
   );
 
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action" id="buttonCapsLock" type="button">Caps Lock</button><button class="button symbol" id="buttonA" type="button">a</button><button class="button symbol" id="buttonS" type="button">s</button><button class="button symbol" id="buttonD" type="button">d</button><button class="button symbol" id="buttonF" type="button">f</button><button class="button symbol" id="buttonG" type="button">g</button><button class="button symbol" id="buttonH" type="button">h</button><button class="button symbol" id="buttonJ" type="button">j</button><button class="button symbol" id="buttonK" type="button">k</button><button class="button symbol" id="buttonL" type="button">l</button><button class="button symbol" id="buttonSemicolon" type="button">&semi;</button><button class="button symbol" id="buttonApostrophe" type="button">&apos;</button><button class="button action" id="buttonEnter" type="button">&#13;</button>'
+    '<button class="button action" id="buttonCapsLock" type="button"></button><button class="button symbol letter" id="buttonA" type="button"a</button><button class="button symbol letter" id="buttonS" type="button"></button><button class="button symbol letter" id="buttonD" type="button"></button><button class="button symbol letter" id="buttonF" type="buttonF"></button><button class="button symbol letter" id="buttonG" type="button"></button><button class="button symbol letter" id="buttonH" type="button"></button><button class="button symbol letter" id="buttonJ" type="button"></button><button class="button symbol letter" id="buttonK" type="button"></button><button class="button symbol letter" id="buttonL" type="button"></button><button class="button symbol" id="buttonSemicolon" type="button"></button><button class="button symbol" id="buttonApostrophe" type="button"></button><button class="button action" id="buttonEnter" type="button"></button>'
   );
 
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action" id="buttonLeftShift" type="button">Shift</button><button class="button symbol" id="buttonZ" type="button">z</button><button class="button symbol" id="buttonX" type="button">x</button><button class="button symbol" id="buttonC" type="button">c</button><button class="button symbol" id="buttonV" type="button">v</button><button class="button symbol" id="buttonB" type="button">b</button><button class="button symbol" id="buttonN" type="button">n</button><button class="button symbol" id="buttonM" type="button">m</button><button class="button symbol" id="buttonComma" type="button">,</button><button class="button symbol" id="buttonDot" type="button">.</button><button class="button symbol" id="buttonForwardSlash" type="button">&sol;</button><button class="button action" id="buttonForward" type="button">&#8679;</button><button class="button action" id="buttonRightShift" type="button">Shift</button>'
+    '<button class="button action" id="buttonLeftShift" type="button"></button><button class="button symbol letter" id="buttonZ" type="button"></button><button class="button symbol letter" id="buttonX" type="button"></button><button class="button symbol letter" id="buttonC" type="button"></button><button class="button symbol letter" id="buttonV" type="button"></button><button class="button symbol letter" id="buttonB" type="button"></button><button class="button symbol letter" id="buttonN" type="button"></button><button class="button symbol letter" id="buttonM" type="button"></button><button class="button symbol" id="buttonComma" type="button"></button><button class="button symbol" id="buttonDot" type="button"></button><button class="button symbol" id="buttonForwardSlash" type="button"></button><button class="button action" id="buttonForward" type="button"></button><button class="button action" id="buttonRightShift" type="button"></button>'
   );
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action" id="buttonLeftControl" type="button">Ctrl</button><button class="button action" id="buttonWin" type="button">Win</button><button class="button action" id="buttonLeftAlt" type="button">Alt</button><button class="button symbol" id="buttonSpace" type="button">Space</button><button class="button action" id="buttonRightAlt" type="button">Alt</button><button class="button action" id="buttonLeft" type="button">&#8678;</button><button class="button action" id="buttonBack" type="button">&#8681;</button><button class="button action" id="buttonRight" type="button">&#8680;</button><button class="button action" id="buttonRightControl" type="button">Ctrl</button>'
+    '<button class="button action" id="buttonLeftControl" type="button"></button><button class="button action" id="buttonWin" type="button"></button><button class="button action" id="buttonLeftAlt" type="button"></button><button class="button symbol" id="buttonSpace" type="button"></button><button class="button action" id="buttonRightAlt" type="button"></button><button class="button action" id="buttonLeft" type="button"></button><button class="button action" id="buttonBack" type="button"></button><button class="button action" id="buttonRight" type="button"></button><button class="button action" id="buttonRightControl" type="button"></button>'
   );
 }
 
 keyboardCreate();
+
+let buttonKeys = [
+  {
+    value: "buttonBackquote",
+    en_caps: "`",
+    en_down: "`",
+    en_up: "~",
+    en_shift: "~",
+    ru_caps: "Ё",
+    ru_down: "ё",
+    ru_up: "Ё",
+    ru_shift: "ё",
+  },
+  {
+    value: "button1",
+    en_caps: "1",
+    en_down: "1",
+    en_up: "!",
+    en_shift: "!",
+    ru_caps: "1",
+    ru_down: "1",
+    ru_up: "!",
+    ru_shift: "!",
+  },
+  {
+    value: "button2",
+    en_caps: "2",
+    en_down: "2",
+    en_up: "@",
+    en_shift: "@",
+    ru_caps: "2",
+    ru_down: "2",
+    ru_up: '"',
+    ru_shift: '"',
+  },
+  {
+    value: "button3",
+    en_caps: "3",
+    en_down: "3",
+    en_up: "#",
+    en_shift: "#",
+    ru_caps: "3",
+    ru_down: "3",
+    ru_up: "№",
+    ru_shift: "№",
+  },
+  {
+    value: "button4",
+    en_caps: "4",
+    en_down: "4",
+    en_up: "$",
+    en_shift: "$",
+    ru_caps: "4",
+    ru_down: "4",
+    ru_up: ";",
+    ru_shift: ";",
+  },
+  {
+    value: "button5",
+    en_caps: "5",
+    en_down: "5",
+    en_up: "%",
+    en_shift: "%",
+    ru_caps: "5",
+    ru_down: "5",
+    ru_up: "%",
+    ru_shift: "%",
+  },
+  {
+    value: "button6",
+    en_caps: "6",
+    en_down: "6",
+    en_up: "^",
+    en_shift: "^",
+    ru_caps: "6",
+    ru_down: "6",
+    ru_up: ":",
+    ru_shift: ":",
+  },
+  {
+    value: "button7",
+    en_caps: "7",
+    en_down: "7",
+    en_up: "&",
+    en_shift: "&",
+    ru_caps: "7",
+    ru_down: "7",
+    ru_up: "?",
+    ru_shift: "?",
+  },
+  {
+    value: "button8",
+    en_caps: "8",
+    en_down: "8",
+    en_up: "*",
+    en_shift: "*",
+    ru_caps: "8",
+    ru_down: "8",
+    ru_up: "*",
+    ru_shift: "*",
+  },
+  {
+    value: "button9",
+    en_caps: "9",
+    en_down: "9",
+    en_up: "(",
+    en_shift: "(",
+    ru_caps: "9",
+    ru_down: "9",
+    ru_up: "(",
+    ru_shift: "(",
+  },
+  {
+    value: "button0",
+    en_caps: "0",
+    en_down: "0",
+    en_up: ")",
+    en_shift: ")",
+    ru_caps: "0",
+    ru_down: "0",
+    ru_up: ")",
+    ru_shift: ")",
+  },
+  {
+    value: "buttonDash",
+    en_caps: "-",
+    en_down: "-",
+    en_up: "_",
+    en_shift: "_",
+    ru_caps: "-",
+    ru_down: "-",
+    ru_up: "_",
+    ru_shift: "_",
+  },
+  {
+    value: "buttonEqually",
+    en_caps: "=",
+    en_down: "=",
+    en_up: "+",
+    en_shift: "+",
+    ru_caps: "=",
+    ru_down: "=",
+    ru_up: "+",
+    ru_shift: "+",
+  },
+  {
+    value: "buttonBackspace",
+    en_down: "⟵",
+    en_up: "⟵",
+    ru_down: "⟵",
+    ru_up: "⟵",
+  },
+  {
+    value: "buttonTab",
+    en_down: "Tab",
+    en_up: "Tab",
+    ru_down: "Tab",
+    ru_up: "Tab",
+  },
+  {
+    value: "buttonQ",
+    en_down: "q",
+    en_up: "Q",
+    ru_down: "й",
+    ru_up: "Й",
+  },
+  {
+    value: "buttonW",
+    en_down: "w",
+    en_up: "W",
+    ru_down: "ц",
+    ru_up: "Ц",
+  },
+  {
+    value: "buttonE",
+    en_down: "e",
+    en_up: "E",
+    ru_down: "у",
+    ru_up: "У",
+  },
+  {
+    value: "buttonR",
+    en_down: "r",
+    en_up: "R",
+    ru_down: "к",
+    ru_up: "К",
+  },
+  {
+    value: "buttonT",
+    en_down: "t",
+    en_up: "T",
+    ru_down: "е",
+    ru_up: "Е",
+  },
+  {
+    value: "buttonY",
+    en_down: "y",
+    en_up: "Y",
+    ru_down: "н",
+    ru_up: "Н",
+  },
+  {
+    value: "buttonU",
+    en_down: "u",
+    en_up: "U",
+    ru_down: "г",
+    ru_up: "Г",
+  },
+  {
+    value: "buttonI",
+    en_down: "i",
+    en_up: "I",
+    ru_down: "ш",
+    ru_up: "Ш",
+  },
+  {
+    value: "buttonO",
+    en_down: "o",
+    en_up: "O",
+    ru_down: "щ",
+    ru_up: "Щ",
+  },
+  {
+    value: "buttonP",
+    en_down: "p",
+    en_up: "P",
+    ru_down: "з",
+    ru_up: "З",
+  },
+  {
+    value: "buttonOpenSquareBracket",
+    en_caps: "[",
+    en_down: "[",
+    en_up: "{",
+    en_shift: "{",
+    ru_caps: "Х",
+    ru_down: "х",
+    ru_up: "Х",
+    ru_shift: "х",
+  },
+  {
+    value: "buttonCloseSquareBracket",
+    en_caps: "]",
+    en_down: "]",
+    en_up: "}",
+    en_shift: "}",
+    ru_caps: "Ъ",
+    ru_down: "ъ",
+    ru_up: "Ъ",
+    ru_shift: "ъ",
+  },
+  {
+    value: "buttonBackSlash",
+    en_caps: "\\",
+    en_down: "\\",
+    en_up: "|",
+    en_shift: "|",
+    ru_caps: "\\",
+    ru_down: "\\",
+    ru_up: "/",
+    ru_shift: "/",
+  },
+  {
+    value: "buttonCapsLock",
+    en_down: "CapsLock",
+    en_up: "CapsLock",
+    ru_down: "CapsLock",
+    ru_up: "CapsLock",
+  },
+  {
+    value: "buttonA",
+    en_down: "a",
+    en_up: "A",
+    ru_down: "ф",
+    ru_up: "Ф",
+  },
+  {
+    value: "buttonS",
+    en_down: "s",
+    en_up: "S",
+    ru_down: "ы",
+    ru_up: "Ы",
+  },
+  {
+    value: "buttonD",
+    en_down: "d",
+    en_up: "D",
+    ru_down: "в",
+    ru_up: "В",
+  },
+  {
+    value: "buttonF",
+    en_down: "f",
+    en_up: "F",
+    ru_down: "а",
+    ru_up: "А",
+  },
+  {
+    value: "buttonG",
+    en_down: "g",
+    en_up: "G",
+    ru_down: "п",
+    ru_up: "П",
+  },
+  {
+    value: "buttonH",
+    en_down: "h",
+    en_up: "H",
+    ru_down: "р",
+    ru_up: "Р",
+  },
+  {
+    value: "buttonJ",
+    en_down: "j",
+    en_up: "J",
+    ru_down: "о",
+    ru_up: "О",
+  },
+  {
+    value: "buttonK",
+    en_down: "k",
+    en_up: "K",
+    ru_down: "л",
+    ru_up: "Л",
+  },
+  {
+    value: "buttonL",
+    en_down: "l",
+    en_up: "L",
+    ru_down: "д",
+    ru_up: "Д",
+  },
+  {
+    value: "buttonSemicolon",
+    en_caps: ";",
+    en_down: ";",
+    en_up: ":",
+    en_shift: ":",
+    ru_caps: "Ж",
+    ru_down: "ж",
+    ru_up: "Ж",
+    ru_shift: "ж",
+  },
+  {
+    value: "buttonApostrophe",
+    en_caps: "'",
+    en_down: "'",
+    en_up: '"',
+    en_shift: '"',
+    ru_caps: "Э",
+    ru_down: "э",
+    ru_up: "Э",
+    ru_shift: "э",
+  },
+  {
+    value: "buttonEnter",
+    en_down: "Enter",
+    en_up: "Enter",
+    ru_down: "Enter",
+    ru_up: "Enter",
+  },
+
+  {
+    value: "buttonLeftShift",
+    en_down: "Shift",
+    en_up: "Shift",
+    ru_down: "Shift",
+    ru_up: "Shift",
+  },
+  {
+    value: "buttonZ",
+    en_down: "z",
+    en_up: "Z",
+    ru_down: "я",
+    ru_up: "Я",
+  },
+  {
+    value: "buttonX",
+    en_down: "x",
+    en_up: "X",
+    ru_down: "ч",
+    ru_up: "Ч",
+  },
+  {
+    value: "buttonC",
+    en_down: "c",
+    en_up: "C",
+    ru_down: "с",
+    ru_up: "С",
+  },
+  {
+    value: "buttonV",
+    en_down: "v",
+    en_up: "V",
+    ru_down: "м",
+    ru_up: "М",
+  },
+  {
+    value: "buttonB",
+    en_down: "b",
+    en_up: "B",
+    ru_down: "и",
+    ru_up: "И",
+  },
+  {
+    value: "buttonN",
+    en_down: "n",
+    en_up: "N",
+    ru_down: "т",
+    ru_up: "Т",
+  },
+  {
+    value: "buttonM",
+    en_down: "m",
+    en_up: "M",
+    ru_down: "ь",
+    ru_up: "Ь",
+  },
+  {
+    value: "buttonComma",
+    en_caps: ",",
+    en_down: ",",
+    en_up: "<",
+    en_shift: "<",
+    ru_caps: "Б",
+    ru_down: "б",
+    ru_up: "Б",
+    ru_shift: "б",
+  },
+  {
+    value: "buttonDot",
+    en_caps: ".",
+    en_down: ".",
+    en_up: ">",
+    en_shift: ">",
+    ru_caps: "Ю",
+    ru_down: "ю",
+    ru_up: "Ю",
+    ru_shift: "ю",
+  },
+  {
+    value: "buttonForwardSlash",
+    en_caps: "/",
+    en_down: "/",
+    en_up: "?",
+    en_shift: "?",
+    ru_caps: ".",
+    ru_down: ".",
+    ru_up: ",",
+    ru_shift: ",",
+  },
+  {
+    value: "buttonForward",
+    en_down: "&#8679;",
+    en_up: "&#8679;",
+    ru_down: "&#8679;",
+    ru_up: "&#8679;",
+  },
+  {
+    value: "buttonRightShift",
+    en_down: "Shift",
+    en_up: "Shift",
+    ru_down: "Shift",
+    ru_up: "Shift",
+  },
+  {
+    value: "buttonLeftControl",
+    en_down: "Ctrl",
+    en_up: "Ctrl",
+    ru_down: "Ctrl",
+    ru_up: "Ctrl",
+  },
+  {
+    value: "buttonWin",
+    en_down: "Win",
+    en_up: "Win",
+    ru_down: "Win",
+    ru_up: "Win",
+  },
+  {
+    value: "buttonLeftAlt",
+    en_down: "Alt",
+    en_up: "Alt",
+    ru_down: "Alt",
+    ru_up: "Alt",
+  },
+  {
+    value: "buttonSpace",
+    en_down: " ",
+    en_up: " ",
+    ru_down: " ",
+    ru_up: " ",
+  },
+  {
+    value: "buttonRightAlt",
+    en_down: "Alt",
+    en_up: "Alt",
+    ru_down: "Alt",
+    ru_up: "Alt",
+  },
+  {
+    value: "buttonLeft",
+    en_down: "&#8678;",
+    en_up: "&#8678;",
+    ru_down: "&#8678;",
+    ru_up: "&#8678;",
+  },
+  {
+    value: "buttonBack",
+    en_down: "&#8681;",
+    en_up: "&#8681;",
+    ru_down: "&#8681;",
+    ru_up: "&#8681;",
+  },
+  {
+    value: "buttonRight",
+    en_down: "&#8680;",
+    en_up: "&#8680;",
+    ru_down: "&#8680;",
+    ru_up: "&#8680;",
+  },
+  {
+    value: "buttonRightControl",
+    en_down: "Ctrl",
+    en_up: "Ctrl",
+    ru_down: "Ctrl",
+    ru_up: "Ctrl",
+  },
+];
+
+const button = document.querySelectorAll(".button");
+
+let lang;
+let cplck;
+
+button.forEach((button) => {
+  for (let i = 0; i < buttonKeys.length; i++) {
+    if (button.id == buttonKeys[i].value)
+      button.innerHTML += buttonKeys[i].en_down;
+    lang = "en";
+    cplck = "down";
+  }
+});
+
+// document.addEventListener("keydown", (event) => {
+//   if (event.key === "Enter" && event.getModifierState("Shift")) {
+//     button.innerHTML += buttonKeys[i].ru_down;
+//   }
+// });
+
+const shift = document.getElementById("shift");
+const alt = document.getElementById("Alt");
+
+// document.addEventListener((event) => {
+//   if (event.getModifierState("Shift") && event.getModifierState("Alt")) {
+//     if (lang === "en") {
+//       button.forEach((button) => {
+//         for (let i = 0; i < buttonKeys.length; i++) {
+//           if (button.id == buttonKeys[i].value)
+//             button.innerHTML += buttonKeys[i].ru_down;
+//           lang = "ru";
+//         }
+//       });
+//     } else {
+//       button.forEach((button) => {
+//         for (let i = 0; i < buttonKeys.length; i++) {
+//           if (button.id == buttonKeys[i].value)
+//             button.innerHTML += buttonKeys[i].en_down;
+//           lang = "en";
+//         }
+//       });
+//     }
+//   }
+// });
+
+// const capsLockDone = document.getElementById("buttonCapsLock");
+
+// capsLockDone.addEventListener("click", () => {
+//   if (cplck === "down" && lang === "en") {
+//     button.forEach((button) => {
+//       for (let i = 0; i < buttonKeys.length; i++) {
+//         if (
+//           button.id == buttonKeys[i].value &&
+//           button.classList.contains("letter")
+//         )
+//           button.innerHTML = buttonKeys[i].en_up;
+//         cplck = "up";
+//       }
+//     });
+//   } else if (cplck === "up" && lang === "en") {
+//     button.forEach((button) => {
+//       for (let i = 0; i < buttonKeys.length; i++) {
+//         if (
+//           button.id == buttonKeys[i].value &&
+//           button.classList.contains("letter")
+//         )
+//           button.innerHTML = buttonKeys[i].en_down;
+//         cplck = "down";
+//       }
+//     });
+//   } else if (cplck === "down" && lang === "ru") {
+//     button.forEach((button) => {
+//       for (let i = 0; i < buttonKeys.length; i++) {
+//         if (
+//           button.id == buttonKeys[i].value &&
+//           button.classList.contains("letter")
+//         )
+//           button.innerHTML = buttonKeys[i].ru_up;
+//         cplck = "up";
+//       }
+//     });
+//   } else if (cplck === "up" && lang === "ru") {
+//     button.forEach((button) => {
+//       for (let i = 0; i < buttonKeys.length; i++) {
+//         if (
+//           button.id == buttonKeys[i].value &&
+//           button.classList.contains("letter")
+//         )
+//           button.innerHTML = buttonKeys[i].ru_down;
+//         cplck = "down";
+//       }
+//     });
+//   }
+// });
+
+// const symbolPrint = document.getElementsByClassName("symbol");
+
+// symbolPrint.addEventListener("click", () => {
+
+// });
