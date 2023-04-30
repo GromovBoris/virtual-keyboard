@@ -684,8 +684,12 @@ capsLockDone.addEventListener("click", () => {
   }
 });
 
-// const symbolPrint = document.getElementsByClassName("symbol");
+const symbolPrint = document.querySelectorAll(".symbol");
+const textarea = document.querySelector("textarea");
 
-// symbolPrint.addEventListener("click", () => {
-
-// });
+symbolPrint.forEach((element) => {
+  element.addEventListener("click", () => {
+    let value = element.textContent;
+    textarea.value += value;
+  });
+});
