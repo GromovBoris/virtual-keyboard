@@ -1,6 +1,8 @@
-// import insertButtons from "./keys2.js";
+// СОЗДАНИЕ КЛАВИАТУРЫ
 
 function keyboardCreate() {
+  // ПРОРИСОВКА КЛАВИАТУРЫ
+
   const body = document.querySelector("body");
   body.insertAdjacentHTML("afterbegin", '<div class="wrapper"></div>');
   const wrapper = document.querySelector(".wrapper");
@@ -32,25 +34,27 @@ function keyboardCreate() {
     '<div class="keyboard"></div>'
   );
 
+  // ЗАПОЛНЕНИЕ РЯДОВ BUTTON
+
   const keyboard = document.querySelector(".keyboard");
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button symbol" id="buttonBackquote" type="button"></button><button class="button symbol" id="button1" type="button"></button><button class="button symbol" id="button2" type="button"></button><button class="button symbol" id="button3" type="button"></button><button class="button symbol" id="button4" type="button"></button><button class="button symbol" id="button5" type="button"></button><button class="button symbol" id="button6" type="button"></button><button class="button symbol" id="button7" type="button"></button><button class="button symbol" id="button8" type="button"></button><button class="button symbol" id="button9" type="button"></button><button class="button symbol" id="button0" type="button"></button><button class="button symbol" id="buttonDash" type="button"></button><button class="button symbol" id="buttonEqually" type="button"></button><button class="button action" id="buttonBackspace" type="button"></button>'
+    '<button class="button symbol letter" id="buttonBackquote" type="button"></button><button class="button symbol" id="button1" type="button"></button><button class="button symbol" id="button2" type="button"></button><button class="button symbol" id="button3" type="button"></button><button class="button symbol" id="button4" type="button"></button><button class="button symbol" id="button5" type="button"></button><button class="button symbol" id="button6" type="button"></button><button class="button symbol" id="button7" type="button"></button><button class="button symbol" id="button8" type="button"></button><button class="button symbol" id="button9" type="button"></button><button class="button symbol" id="button0" type="button"></button><button class="button symbol" id="buttonDash" type="button"></button><button class="button symbol" id="buttonEqually" type="button"></button><button class="button action" id="buttonDel" type="button"></button><button class="button action" id="buttonBackspace" type="button"></button>'
   );
 
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action" id="buttonTab" type="button"></button><button class="button symbol letter" id="buttonQ" type="button"></button><button class="button symbol letter" id="buttonW" type="button"></button><button class="button symbol letter" id="buttonE" type="button"></button><button class="button symbol letter" id="buttonR" type="button"></button><button class="button symbol letter" id="buttonT" type="button"></button><button class="button symbol letter" id="buttonY" type="button"></button><button class="button symbol letter" id="buttonU" type="button"></button><button class="button symbol letter" id="buttonI" type="button"></button><button class="button symbol letter" id="buttonO" type="button"></button><button class="button symbol letter" id="buttonP" type="button"></button><button class="button symbol" id="buttonOpenSquareBracket" type="button"></button><button class="button symbol" id="buttonCloseSquareBracket" type="button"></button><button class="button action" id="buttonBackSlash" type="button"></button>'
+    '<button class="button action" id="buttonTab" type="button"></button><button class="button symbol letter" id="buttonQ" type="button"></button><button class="button symbol letter" id="buttonW" type="button"></button><button class="button symbol letter" id="buttonE" type="button"></button><button class="button symbol letter" id="buttonR" type="button"></button><button class="button symbol letter" id="buttonT" type="button"></button><button class="button symbol letter" id="buttonY" type="button"></button><button class="button symbol letter" id="buttonU" type="button"></button><button class="button symbol letter" id="buttonI" type="button"></button><button class="button symbol letter" id="buttonO" type="button"></button><button class="button symbol letter" id="buttonP" type="button"></button><button class="button symbol letter" id="buttonOpenSquareBracket" type="button"></button><button class="button symbol letter" id="buttonCloseSquareBracket" type="button"></button><button class="button action" id="buttonBackSlash" type="button"></button>'
   );
 
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action" id="buttonCapsLock" type="button"></button><button class="button symbol letter" id="buttonA" type="button"a</button><button class="button symbol letter" id="buttonS" type="button"></button><button class="button symbol letter" id="buttonD" type="button"></button><button class="button symbol letter" id="buttonF" type="buttonF"></button><button class="button symbol letter" id="buttonG" type="button"></button><button class="button symbol letter" id="buttonH" type="button"></button><button class="button symbol letter" id="buttonJ" type="button"></button><button class="button symbol letter" id="buttonK" type="button"></button><button class="button symbol letter" id="buttonL" type="button"></button><button class="button symbol" id="buttonSemicolon" type="button"></button><button class="button symbol" id="buttonApostrophe" type="button"></button><button class="button action" id="buttonEnter" type="button"></button>'
+    '<button class="button action" id="buttonCapsLock" type="button"></button><button class="button symbol letter" id="buttonA" type="button"a</button><button class="button symbol letter" id="buttonS" type="button"></button><button class="button symbol letter" id="buttonD" type="button"></button><button class="button symbol letter" id="buttonF" type="buttonF"></button><button class="button symbol letter" id="buttonG" type="button"></button><button class="button symbol letter" id="buttonH" type="button"></button><button class="button symbol letter" id="buttonJ" type="button"></button><button class="button symbol letter" id="buttonK" type="button"></button><button class="button symbol letter" id="buttonL" type="button"></button><button class="button symbol letter" id="buttonSemicolon" type="button"></button><button class="button symbol letter" id="buttonApostrophe" type="button"></button><button class="button action" id="buttonEnter" type="button"></button>'
   );
 
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action" id="buttonLeftShift" type="button"></button><button class="button symbol letter" id="buttonZ" type="button"></button><button class="button symbol letter" id="buttonX" type="button"></button><button class="button symbol letter" id="buttonC" type="button"></button><button class="button symbol letter" id="buttonV" type="button"></button><button class="button symbol letter" id="buttonB" type="button"></button><button class="button symbol letter" id="buttonN" type="button"></button><button class="button symbol letter" id="buttonM" type="button"></button><button class="button symbol" id="buttonComma" type="button"></button><button class="button symbol" id="buttonDot" type="button"></button><button class="button symbol" id="buttonForwardSlash" type="button"></button><button class="button action" id="buttonForward" type="button"></button><button class="button action" id="buttonRightShift" type="button"></button>'
+    '<button class="button action shift" id="buttonLeftShift" type="button"></button><button class="button symbol letter" id="buttonZ" type="button"></button><button class="button symbol letter" id="buttonX" type="button"></button><button class="button symbol letter" id="buttonC" type="button"></button><button class="button symbol letter" id="buttonV" type="button"></button><button class="button symbol letter" id="buttonB" type="button"></button><button class="button symbol letter" id="buttonN" type="button"></button><button class="button symbol letter" id="buttonM" type="button"></button><button class="button symbol letter" id="buttonComma" type="button"></button><button class="button symbol letter" id="buttonDot" type="button"></button><button class="button symbol letter" id="buttonForwardSlash" type="button"></button><button class="button action" id="buttonForward" type="button"></button><button class="button action shift" id="buttonRightShift" type="button"></button>'
   );
   keyboard.insertAdjacentHTML(
     "beforeend",
@@ -59,6 +63,8 @@ function keyboardCreate() {
 }
 
 keyboardCreate();
+
+// МАССИВ ЗНАЧЕНИЙ BUTTON
 
 let buttonKeys = [
   {
@@ -203,6 +209,13 @@ let buttonKeys = [
     ru_down: "=",
     ru_up: "+",
     ru_shift: "+",
+  },
+  {
+    value: "buttonDel",
+    en_down: "Del",
+    en_up: "Del",
+    ru_down: "Del",
+    ru_up: "Del",
   },
   {
     value: "buttonBackspace",
@@ -589,54 +602,25 @@ let buttonKeys = [
   },
 ];
 
+// ЗАПОЛНЕНИЕ ЗНАЧЕНИЙ BUTTON БАЗОВЫМИ ЗНАЧЕНИЯМИ (en_down)
+
 const button = document.querySelectorAll(".button");
 
-let lang;
-let cplck;
+let lang = "en";
+let cplck = "down";
 
 button.forEach((button) => {
   for (let i = 0; i < buttonKeys.length; i++) {
     if (button.id == buttonKeys[i].value)
       button.innerHTML += buttonKeys[i].en_down;
-    lang = "en";
-    cplck = "down";
   }
 });
 
-// document.addEventListener("keydown", (event) => {
-//   if (event.key === "Enter" && event.getModifierState("Shift")) {
-//     button.innerHTML += buttonKeys[i].ru_down;
-//   }
-// });
+// РЕАЛИЗАЦИЯ CAPS LOCK CLICK
 
-const shift = document.getElementById("shift");
-const alt = document.getElementById("Alt");
+const capsLockClick = document.getElementById("buttonCapsLock");
 
-// document.addEventListener((event) => {
-//   if (event.getModifierState("Shift") && event.getModifierState("Alt")) {
-//     if (lang === "en") {
-//       button.forEach((button) => {
-//         for (let i = 0; i < buttonKeys.length; i++) {
-//           if (button.id == buttonKeys[i].value)
-//             button.innerHTML += buttonKeys[i].ru_down;
-//           lang = "ru";
-//         }
-//       });
-//     } else {
-//       button.forEach((button) => {
-//         for (let i = 0; i < buttonKeys.length; i++) {
-//           if (button.id == buttonKeys[i].value)
-//             button.innerHTML += buttonKeys[i].en_down;
-//           lang = "en";
-//         }
-//       });
-//     }
-//   }
-// });
-
-const capsLockDone = document.getElementById("buttonCapsLock");
-
-capsLockDone.addEventListener("click", () => {
+capsLockClick.addEventListener("click", () => {
   if (cplck === "down" && lang === "en") {
     button.forEach((button) => {
       for (let i = 0; i < buttonKeys.length; i++) {
@@ -684,12 +668,165 @@ capsLockDone.addEventListener("click", () => {
   }
 });
 
+// РЕАЛИЗАЦИЯ CAPS LOCK KEYDOWN
+
+const capsLockKeydown = document.getElementById("buttonCapsLock");
+
+capsLockKeydown.addEventListener("keydown", () => {
+  if (cplck === "down" && lang === "en") {
+    button.forEach((button) => {
+      for (let i = 0; i < buttonKeys.length; i++) {
+        if (
+          button.id == buttonKeys[i].value &&
+          button.classList.contains("letter")
+        )
+          button.innerHTML = buttonKeys[i].en_up;
+        cplck = "up";
+        document.querySelector("textarea").focus();
+      }
+    });
+  } else if (cplck === "up" && lang === "en") {
+    button.forEach((button) => {
+      for (let i = 0; i < buttonKeys.length; i++) {
+        if (
+          button.id == buttonKeys[i].value &&
+          button.classList.contains("letter")
+        )
+          button.innerHTML = buttonKeys[i].en_down;
+        cplck = "down";
+        document.querySelector("textarea").focus();
+      }
+    });
+  } else if (cplck === "down" && lang === "ru") {
+    button.forEach((button) => {
+      for (let i = 0; i < buttonKeys.length; i++) {
+        if (
+          button.id == buttonKeys[i].value &&
+          button.classList.contains("letter")
+        )
+          button.innerHTML = buttonKeys[i].ru_up;
+        cplck = "up";
+        document.querySelector("textarea").focus();
+      }
+    });
+  } else if (cplck === "up" && lang === "ru") {
+    button.forEach((button) => {
+      for (let i = 0; i < buttonKeys.length; i++) {
+        if (
+          button.id == buttonKeys[i].value &&
+          button.classList.contains("letter")
+        )
+          button.innerHTML = buttonKeys[i].ru_down;
+        cplck = "down";
+        document.querySelector("textarea").focus();
+      }
+    });
+  }
+});
+
+// ВВОД ЗНАЧЕНИЙ В TEXTAREA
+
 const symbolPrint = document.querySelectorAll(".symbol");
-const textarea = document.querySelector("textarea");
+const textArea = document.querySelector("textarea");
 
 symbolPrint.forEach((element) => {
   element.addEventListener("click", () => {
     let value = element.textContent;
-    textarea.value += value;
+    textArea.value += value;
+    document.querySelector("textarea").focus();
   });
+});
+
+// РЕАЛИЗАЦИЯ SHIFT+ALT ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА
+
+document.addEventListener("keydown", (event) => {
+  if (event.getModifierState("Shift") && event.getModifierState("Alt")) {
+    if (lang === "en" && cplck === "down") {
+      button.forEach((button) => {
+        for (let i = 0; i < buttonKeys.length; i++) {
+          if (button.id == buttonKeys[i].value) {
+            button.innerHTML = buttonKeys[i].ru_down;
+            document.querySelector("textarea").focus();
+          }
+        }
+      });
+      lang = "ru";
+    } else if (lang === "ru" && cplck === "down") {
+      button.forEach((button) => {
+        for (let i = 0; i < buttonKeys.length; i++) {
+          if (button.id == buttonKeys[i].value) {
+            button.innerHTML = buttonKeys[i].en_down;
+            document.querySelector("textarea").focus();
+          }
+        }
+      });
+      lang = "en";
+    } else if (lang === "en" && cplck === "up") {
+      button.forEach((button) => {
+        for (let i = 0; i < buttonKeys.length; i++) {
+          if (
+            button.id == buttonKeys[i].value &&
+            button.classList.contains("letter")
+          ) {
+            button.innerHTML = buttonKeys[i].ru_up;
+            document.querySelector("textarea").focus();
+          }
+        }
+      });
+      lang = "ru";
+    } else if (lang === "ru" && cplck === "up") {
+      button.forEach((button) => {
+        for (let i = 0; i < buttonKeys.length; i++) {
+          if (
+            button.id == buttonKeys[i].value &&
+            button.classList.contains("letter")
+          ) {
+            button.innerHTML = buttonKeys[i].en_up;
+            document.querySelector("textarea").focus();
+          }
+        }
+      });
+      lang = "en";
+    }
+  }
+});
+
+// ПОДСВЕТКА ВИРТУАЛЬНЫХ КЛАВИШ ПРИ НАЖАТИИ РЕАЛЬНЫХ
+
+document.addEventListener("keydown", (event) => {
+  for (let y = 0; y < buttonKeys.length; y++) {
+    if (event.key == buttonKeys[y].en_down) {
+      let elem = document.getElementById(buttonKeys[y].value);
+      elem.classList.add("active");
+      document.querySelector("textarea").focus();
+    }
+  }
+});
+
+document.addEventListener("keyup", (event) => {
+  for (let y = 0; y < buttonKeys.length; y++) {
+    if (event.key == buttonKeys[y].en_down) {
+      let elem = document.getElementById(buttonKeys[y].value);
+      elem.classList.remove("active");
+      document.querySelector("textarea").focus();
+    }
+  }
+});
+
+// РЕАЛИЗАЦИЯ КНОПКИ ENTER
+
+const enterKey = document.getElementById("buttonEnter");
+
+enterKey.addEventListener("click", () => {
+  textArea.value += "\n";
+  document.querySelector("textarea").focus();
+});
+
+// РЕАЛИЗАЦИЯ КНОПКИ TAB
+
+const tabKey = document.getElementById("buttonTab");
+
+tabKey.addEventListener("click", () => {
+  textArea.value += "\t";
+  document.querySelector("textarea").focus();
 });
