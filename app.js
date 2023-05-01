@@ -54,11 +54,11 @@ function keyboardCreate() {
 
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action shift" id="buttonLeftShift" type="button"></button><button class="button symbol letter" id="buttonZ" type="button"></button><button class="button symbol letter" id="buttonX" type="button"></button><button class="button symbol letter" id="buttonC" type="button"></button><button class="button symbol letter" id="buttonV" type="button"></button><button class="button symbol letter" id="buttonB" type="button"></button><button class="button symbol letter" id="buttonN" type="button"></button><button class="button symbol letter" id="buttonM" type="button"></button><button class="button symbol letter" id="buttonComma" type="button"></button><button class="button symbol letter" id="buttonDot" type="button"></button><button class="button symbol letter" id="buttonForwardSlash" type="button"></button><button class="button action" id="buttonForward" type="button"></button><button class="button action shift" id="buttonRightShift" type="button"></button>'
+    '<button class="button action shift" id="buttonLeftShift" type="button"></button><button class="button symbol letter" id="buttonZ" type="button"></button><button class="button symbol letter" id="buttonX" type="button"></button><button class="button symbol letter" id="buttonC" type="button"></button><button class="button symbol letter" id="buttonV" type="button"></button><button class="button symbol letter" id="buttonB" type="button"></button><button class="button symbol letter" id="buttonN" type="button"></button><button class="button symbol letter" id="buttonM" type="button"></button><button class="button symbol letter" id="buttonComma" type="button"></button><button class="button symbol letter" id="buttonDot" type="button"></button><button class="button symbol letter" id="buttonForwardSlash" type="button"></button><button class="button gobutton action" id="buttonForward" type="button"></button><button class="button action shift" id="buttonRightShift" type="button"></button>'
   );
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action" id="buttonLeftControl" type="button"></button><button class="button action" id="buttonWin" type="button"></button><button class="button action" id="buttonLeftAlt" type="button"></button><button class="button symbol" id="buttonSpace" type="button"></button><button class="button action" id="buttonRightAlt" type="button"></button><button class="button action" id="buttonLeft" type="button"></button><button class="button action" id="buttonBack" type="button"></button><button class="button action" id="buttonRight" type="button"></button><button class="button action" id="buttonRightControl" type="button"></button>'
+    '<button class="button action" id="buttonLeftControl" type="button"></button><button class="button action" id="buttonWin" type="button"></button><button class="button action" id="buttonLeftAlt" type="button"></button><button class="button symbol" id="buttonSpace" type="button"></button><button class="button action" id="buttonRightAlt" type="button"></button><button class="button gobutton action" id="buttonLeft" type="button"></button><button class="button gobutton action" id="buttonBack" type="button"></button><button class="button gobutton action" id="buttonRight" type="button"></button><button class="button action" id="buttonRightControl" type="button"></button>'
   );
 }
 
@@ -628,6 +628,8 @@ capsLockClick.addEventListener("click", () => {
   audio.play();
   if (cplck === "down" && lang === "en") {
     button.forEach((button) => {
+      capsLockKeydown.style.border = "2px solid #fa6cf3";
+      capsLockKeydown.style.boxShadow = "0px 0px 2px 4px #fa6cf3";
       for (let i = 0; i < buttonKeys.length; i++) {
         if (
           button.id == buttonKeys[i].value &&
@@ -639,6 +641,8 @@ capsLockClick.addEventListener("click", () => {
     });
   } else if (cplck === "up" && lang === "en") {
     button.forEach((button) => {
+      capsLockKeydown.style.border = " 2px solid #fcfa88";
+      capsLockKeydown.style.boxShadow = "0 0 5px 2px #fcfa88";
       for (let i = 0; i < buttonKeys.length; i++) {
         if (
           button.id == buttonKeys[i].value &&
@@ -650,6 +654,8 @@ capsLockClick.addEventListener("click", () => {
     });
   } else if (cplck === "down" && lang === "ru") {
     button.forEach((button) => {
+      capsLockKeydown.style.border = "2px solid #fa6cf3";
+      capsLockKeydown.style.boxShadow = "0px 0px 2px 4px #fa6cf3";
       for (let i = 0; i < buttonKeys.length; i++) {
         if (
           button.id == buttonKeys[i].value &&
@@ -661,6 +667,8 @@ capsLockClick.addEventListener("click", () => {
     });
   } else if (cplck === "up" && lang === "ru") {
     button.forEach((button) => {
+      capsLockKeydown.style.border = " 2px solid #fcfa88";
+      capsLockKeydown.style.boxShadow = "0 0 5px 2px #fcfa88";
       for (let i = 0; i < buttonKeys.length; i++) {
         if (
           button.id == buttonKeys[i].value &&
@@ -675,11 +683,14 @@ capsLockClick.addEventListener("click", () => {
 
 // РЕАЛИЗАЦИЯ CAPS LOCK KEYDOWN
 
-// const capsLockKeydown = document.getElementById("buttonCapsLock");
+const capsLockKeydown = document.getElementById("buttonCapsLock");
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "CapsLock") {
+    audio.play();
     if (cplck === "down" && lang === "en") {
+      capsLockKeydown.style.border = "2px solid #fa6cf3";
+      capsLockKeydown.style.boxShadow = "0px 0px 2px 4px #fa6cf3";
       button.forEach((button) => {
         for (let i = 0; i < buttonKeys.length; i++) {
           if (
@@ -688,11 +699,14 @@ document.addEventListener("keydown", (event) => {
           )
             button.innerHTML = buttonKeys[i].en_up;
           cplck = "up";
+
           document.querySelector("textarea").focus();
         }
       });
     } else if (cplck === "up" && lang === "en") {
       button.forEach((button) => {
+        capsLockKeydown.style.border = " 2px solid #fcfa88";
+        capsLockKeydown.style.boxShadow = "0 0 5px 2px #fcfa88";
         for (let i = 0; i < buttonKeys.length; i++) {
           if (
             button.id == buttonKeys[i].value &&
@@ -705,6 +719,8 @@ document.addEventListener("keydown", (event) => {
       });
     } else if (cplck === "down" && lang === "ru") {
       button.forEach((button) => {
+        capsLockKeydown.style.border = "2px solid #fa6cf3";
+        capsLockKeydown.style.boxShadow = "0px 0px 2px 4px #fa6cf3";
         for (let i = 0; i < buttonKeys.length; i++) {
           if (
             button.id == buttonKeys[i].value &&
@@ -717,6 +733,8 @@ document.addEventListener("keydown", (event) => {
       });
     } else if (cplck === "up" && lang === "ru") {
       button.forEach((button) => {
+        capsLockKeydown.style.border = " 2px solid #fcfa88";
+        capsLockKeydown.style.boxShadow = "0 0 5px 2px #fcfa88";
         for (let i = 0; i < buttonKeys.length; i++) {
           if (
             button.id == buttonKeys[i].value &&
@@ -741,7 +759,7 @@ let audio = new Audio("sounds/key.mp3");
 
 // ВВОД ЗНАЧЕНИЙ В TEXTAREA
 
-const symbolPrint = document.querySelectorAll(".symbol");
+const symbolPrint = document.querySelectorAll(".symbol, .gobutton");
 const textArea = document.querySelector("textarea");
 
 symbolPrint.forEach((element) => {

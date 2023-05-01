@@ -186,7 +186,7 @@ h5 {
   color: #d8d8d8;
   font-family: "PT Sans", sans-serif;
   border: 2px solid #fcfa88;
-  box-shadow: 0 0 5px 2px #fcfa88;
+  box-shadow: 0 0 5px 5px #fcfa88;
   padding: 5px;
   cursor: pointer;
 }
