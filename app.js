@@ -606,13 +606,15 @@ let buttonKeys = [
 
 const button = document.querySelectorAll(".button");
 
-let lang = "en";
-let cplck = "down";
+let lang;
+let cplck;
 
 button.forEach((button) => {
   for (let i = 0; i < buttonKeys.length; i++) {
     if (button.id == buttonKeys[i].value)
       button.innerHTML += buttonKeys[i].en_down;
+    lang = "en";
+    cplck = "down";
   }
 });
 
@@ -827,6 +829,23 @@ enterKey.addEventListener("click", () => {
 const tabKey = document.getElementById("buttonTab");
 
 tabKey.addEventListener("click", () => {
-  textArea.value += "\t";
+  textArea.value += "    ";
+  document.querySelector("textarea").focus();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Tab") {
+    textArea.value += "    ";
+    document.querySelector("textarea").focus();
+  }
+});
+
+// РЕАЛИЗАЦИЯ КНОПКИ BACKSPACE
+
+const backSpace = ocument.getElementById("buttonBackspace");
+
+backSpace.addEventListener("click", () => {
+  let currentValue = textArea.value;
+  textArea.value = currentValue.substring(0, currentValue.length - 1);
   document.querySelector("textarea").focus();
 });
