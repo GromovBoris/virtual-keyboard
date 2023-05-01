@@ -8,7 +8,7 @@ function keyboardCreate() {
   const wrapper = document.querySelector(".wrapper");
   wrapper.insertAdjacentHTML(
     "afterbegin",
-    "<div class='header'><h1>Virtual Keyboard 3023q1</h1><h5>humans only</h5></div>"
+    "<div class='header'><h1>RSS Virtual Keyboard 3023q1</h1><h5>Created on Win. Switch languages by left Shift+Alt</h5></div>"
   );
   wrapper.insertAdjacentHTML("beforeend", "<div class='container'></div>");
   const container = document.querySelector(".container");
@@ -44,7 +44,7 @@ function keyboardCreate() {
 
   keyboard.insertAdjacentHTML(
     "beforeend",
-    '<button class="button action" id="buttonTab" type="button"></button><button class="button symbol letter" id="buttonQ" type="button"></button><button class="button symbol letter" id="buttonW" type="button"></button><button class="button symbol letter" id="buttonE" type="button"></button><button class="button symbol letter" id="buttonR" type="button"></button><button class="button symbol letter" id="buttonT" type="button"></button><button class="button symbol letter" id="buttonY" type="button"></button><button class="button symbol letter" id="buttonU" type="button"></button><button class="button symbol letter" id="buttonI" type="button"></button><button class="button symbol letter" id="buttonO" type="button"></button><button class="button symbol letter" id="buttonP" type="button"></button><button class="button symbol letter" id="buttonOpenSquareBracket" type="button"></button><button class="button symbol letter" id="buttonCloseSquareBracket" type="button"></button><button class="button action" id="buttonBackSlash" type="button"></button>'
+    '<button class="button action" id="buttonTab" type="button"></button><button class="button symbol letter" id="buttonQ" type="button"></button><button class="button symbol letter" id="buttonW" type="button"></button><button class="button symbol letter" id="buttonE" type="button"></button><button class="button symbol letter" id="buttonR" type="button"></button><button class="button symbol letter" id="buttonT" type="button"></button><button class="button symbol letter" id="buttonY" type="button"></button><button class="button symbol letter" id="buttonU" type="button"></button><button class="button symbol letter" id="buttonI" type="button"></button><button class="button symbol letter" id="buttonO" type="button"></button><button class="button symbol letter" id="buttonP" type="button"></button><button class="button symbol letter" id="buttonOpenSquareBracket" type="button"></button><button class="button symbol letter" id="buttonCloseSquareBracket" type="button"></button><button class="button symbol" id="buttonBackSlash" type="button"></button>'
   );
 
   keyboard.insertAdjacentHTML(
@@ -625,6 +625,7 @@ button.forEach((button) => {
 const capsLockClick = document.getElementById("buttonCapsLock");
 
 capsLockClick.addEventListener("click", () => {
+  audio.play();
   if (cplck === "down" && lang === "en") {
     button.forEach((button) => {
       for (let i = 0; i < buttonKeys.length; i++) {
@@ -674,59 +675,69 @@ capsLockClick.addEventListener("click", () => {
 
 // РЕАЛИЗАЦИЯ CAPS LOCK KEYDOWN
 
-const capsLockKeydown = document.getElementById("buttonCapsLock");
+// const capsLockKeydown = document.getElementById("buttonCapsLock");
 
-capsLockKeydown.addEventListener("keydown", () => {
-  if (cplck === "down" && lang === "en") {
-    button.forEach((button) => {
-      for (let i = 0; i < buttonKeys.length; i++) {
-        if (
-          button.id == buttonKeys[i].value &&
-          button.classList.contains("letter")
-        )
-          button.innerHTML = buttonKeys[i].en_up;
-        cplck = "up";
-        document.querySelector("textarea").focus();
-      }
-    });
-  } else if (cplck === "up" && lang === "en") {
-    button.forEach((button) => {
-      for (let i = 0; i < buttonKeys.length; i++) {
-        if (
-          button.id == buttonKeys[i].value &&
-          button.classList.contains("letter")
-        )
-          button.innerHTML = buttonKeys[i].en_down;
-        cplck = "down";
-        document.querySelector("textarea").focus();
-      }
-    });
-  } else if (cplck === "down" && lang === "ru") {
-    button.forEach((button) => {
-      for (let i = 0; i < buttonKeys.length; i++) {
-        if (
-          button.id == buttonKeys[i].value &&
-          button.classList.contains("letter")
-        )
-          button.innerHTML = buttonKeys[i].ru_up;
-        cplck = "up";
-        document.querySelector("textarea").focus();
-      }
-    });
-  } else if (cplck === "up" && lang === "ru") {
-    button.forEach((button) => {
-      for (let i = 0; i < buttonKeys.length; i++) {
-        if (
-          button.id == buttonKeys[i].value &&
-          button.classList.contains("letter")
-        )
-          button.innerHTML = buttonKeys[i].ru_down;
-        cplck = "down";
-        document.querySelector("textarea").focus();
-      }
-    });
+document.addEventListener("keydown", (event) => {
+  if (event.key === "CapsLock") {
+    if (cplck === "down" && lang === "en") {
+      button.forEach((button) => {
+        for (let i = 0; i < buttonKeys.length; i++) {
+          if (
+            button.id == buttonKeys[i].value &&
+            button.classList.contains("letter")
+          )
+            button.innerHTML = buttonKeys[i].en_up;
+          cplck = "up";
+          document.querySelector("textarea").focus();
+        }
+      });
+    } else if (cplck === "up" && lang === "en") {
+      button.forEach((button) => {
+        for (let i = 0; i < buttonKeys.length; i++) {
+          if (
+            button.id == buttonKeys[i].value &&
+            button.classList.contains("letter")
+          )
+            button.innerHTML = buttonKeys[i].en_down;
+          cplck = "down";
+          document.querySelector("textarea").focus();
+        }
+      });
+    } else if (cplck === "down" && lang === "ru") {
+      button.forEach((button) => {
+        for (let i = 0; i < buttonKeys.length; i++) {
+          if (
+            button.id == buttonKeys[i].value &&
+            button.classList.contains("letter")
+          )
+            button.innerHTML = buttonKeys[i].ru_up;
+          cplck = "up";
+          document.querySelector("textarea").focus();
+        }
+      });
+    } else if (cplck === "up" && lang === "ru") {
+      button.forEach((button) => {
+        for (let i = 0; i < buttonKeys.length; i++) {
+          if (
+            button.id == buttonKeys[i].value &&
+            button.classList.contains("letter")
+          )
+            button.innerHTML = buttonKeys[i].ru_down;
+          cplck = "down";
+          document.querySelector("textarea").focus();
+        }
+      });
+    }
   }
 });
+
+// ДОБАВЛЯЕМ В BUTTON ЗВУК
+
+document.querySelectorAll("button").forEach(function (button) {
+  button.setAttribute("onclick", "playSound()");
+});
+
+let audio = new Audio("sounds/key.mp3");
 
 // ВВОД ЗНАЧЕНИЙ В TEXTAREA
 
@@ -737,6 +748,7 @@ symbolPrint.forEach((element) => {
   element.addEventListener("click", () => {
     let value = element.textContent;
     textArea.value += value;
+    audio.play();
     document.querySelector("textarea").focus();
   });
 });
@@ -745,6 +757,7 @@ symbolPrint.forEach((element) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.getModifierState("Shift") && event.getModifierState("Alt")) {
+    audio.play();
     if (lang === "en" && cplck === "down") {
       button.forEach((button) => {
         for (let i = 0; i < buttonKeys.length; i++) {
@@ -797,31 +810,51 @@ document.addEventListener("keydown", (event) => {
 
 // ПОДСВЕТКА ВИРТУАЛЬНЫХ КЛАВИШ ПРИ НАЖАТИИ РЕАЛЬНЫХ
 
+// нажимаем
+
 document.addEventListener("keydown", (event) => {
+  audio.play();
   for (let y = 0; y < buttonKeys.length; y++) {
     if (event.key == buttonKeys[y].en_down) {
       let elem = document.getElementById(buttonKeys[y].value);
-      elem.classList.add("active");
+      if (
+        elem.classList.contains("letter") ||
+        elem.classList.contains("symbol")
+      ) {
+        elem.classList.add("active");
+      } else {
+        elem.classList.add("activeAction");
+      }
       document.querySelector("textarea").focus();
     }
   }
 });
+
+// отпускаем
 
 document.addEventListener("keyup", (event) => {
   for (let y = 0; y < buttonKeys.length; y++) {
     if (event.key == buttonKeys[y].en_down) {
       let elem = document.getElementById(buttonKeys[y].value);
-      elem.classList.remove("active");
+      if (
+        elem.classList.contains("letter") ||
+        elem.classList.contains("symbol")
+      ) {
+        elem.classList.remove("active");
+      } else {
+        elem.classList.remove("activeAction");
+      }
       document.querySelector("textarea").focus();
     }
   }
 });
 
-// РЕАЛИЗАЦИЯ КНОПКИ ENTER
+// РЕАЛИЗАЦИЯ КНОПКИ ENTER по клику
 
 const enterKey = document.getElementById("buttonEnter");
 
 enterKey.addEventListener("click", () => {
+  audio.play();
   textArea.value += "\n";
   document.querySelector("textarea").focus();
 });
@@ -830,10 +863,15 @@ enterKey.addEventListener("click", () => {
 
 const tabKey = document.getElementById("buttonTab");
 
+// по клику
+
 tabKey.addEventListener("click", () => {
+  audio.play();
   textArea.value += "    ";
   document.querySelector("textarea").focus();
 });
+
+// по нажатию
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Tab") {
@@ -842,11 +880,12 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// РЕАЛИЗАЦИЯ КНОПКИ BACKSPACE
+// РЕАЛИЗАЦИЯ КНОПКИ BACKSPACE по клику
 
 const backSpace = document.getElementById("buttonBackspace");
 
 backSpace.addEventListener("click", () => {
+  audio.play();
   let currentValue = textArea.value;
   textArea.value = currentValue.substring(0, currentValue.length - 1);
   document.querySelector("textarea").focus();
@@ -856,7 +895,10 @@ backSpace.addEventListener("click", () => {
 
 const del = document.getElementById("buttonDel");
 
+// по клику
+
 del.addEventListener("click", () => {
+  audio.play();
   let currentValue = textArea.value;
   let cursorPosition = textArea.selectionStart;
   if (cursorPosition < currentValue.length) {
@@ -868,6 +910,8 @@ del.addEventListener("click", () => {
   }
 });
 
+// по нажатию
+
 textArea.addEventListener("keydown", (event) => {
   if (event.key === 46) {
     let currentValue = textArea.value;
@@ -878,5 +922,20 @@ textArea.addEventListener("keydown", (event) => {
         currentValue.substring(cursorPosition + 1);
       textArea.setSelectionRange(cursorPosition, cursorPosition);
     }
+  }
+});
+
+// РЕАЛИЗАЦИЯ SHIFT+ALT ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА
+
+document.addEventListener("keypress", (event) => {
+  if (event.getModifierState("Shift") && lang === "ru") {
+    button.forEach((button) => {
+      for (let i = 0; i < buttonKeys.length; i++) {
+        if (button.id == buttonKeys[i].value) {
+          button.innerHTML = buttonKeys[i].ru_shift;
+          document.querySelector("textarea").focus();
+        }
+      }
+    });
   }
 });

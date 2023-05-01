@@ -53,6 +53,7 @@ h1 {
   max-width: 500px;
   height: 50px;
 }
+
 h5 {
   margin: auto;
   font-family: "PT Sans", sans-serif;
@@ -124,7 +125,7 @@ h5 {
   box-shadow: 0 0 5px 2px #4caf50;
 }
 
-.button {
+.letter {
   font-size: 15px;
   border-radius: 10px;
   background-color: #272525;
@@ -135,7 +136,29 @@ h5 {
   outline: 0;
 }
 
-.button:hover {
+.symbol {
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #272525;
+  color: #d8d8d8;
+  font-family: "PT Sans", sans-serif;
+  border: 2px solid #4caf50;
+  box-shadow: 0 0 5px 2px #4caf50;
+  outline: 0;
+}
+
+.action {
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #272525;
+  color: #d8d8d8;
+  font-family: "PT Sans", sans-serif;
+  border: 2px solid #fcfa88;
+  box-shadow: 0 0 5px 2px #fcfa88;
+  outline: 0;
+}
+
+.letter:hover {
   border-radius: 10px;
   background-color: #272525;
   color: #d8d8d8;
@@ -143,9 +166,32 @@ h5 {
   border: 2px solid #4caf50;
   box-shadow: 0 0 5px 5px #4caf50;
   padding: 5px;
+  cursor: pointer;
 }
 
-.button:active {
+.symbol:hover {
+  border-radius: 10px;
+  background-color: #272525;
+  color: #d8d8d8;
+  font-family: "PT Sans", sans-serif;
+  border: 2px solid #4caf50;
+  box-shadow: 0 0 5px 5px #4caf50;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.action:hover {
+  border-radius: 10px;
+  background-color: #272525;
+  color: #d8d8d8;
+  font-family: "PT Sans", sans-serif;
+  border: 2px solid #fcfa88;
+  box-shadow: 0 0 5px 2px #fcfa88;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.letter:active {
   font-size: 13px;
   transform: translate(5%, 5%);
   height: 90%;
@@ -156,6 +202,34 @@ h5 {
   font-family: "PT Sans", sans-serif;
   border: 2px solid #4caf50;
   box-shadow: 0px 0px 5px 7px #4caf50;
+  padding: 5px;
+}
+
+.symbol:active {
+  font-size: 13px;
+  transform: translate(5%, 5%);
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #272525;
+  color: #d8d8d8;
+  font-family: "PT Sans", sans-serif;
+  border: 2px solid #4caf50;
+  box-shadow: 0px 0px 5px 7px #4caf50;
+  padding: 5px;
+}
+
+.action:active {
+  font-size: 13px;
+  transform: translate(5%, 5%);
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #272525;
+  color: #d8d8d8;
+  font-family: "PT Sans", sans-serif;
+  border: 2px solid #fcfa88;
+  box-shadow: 0px 0px 5px 7px #fcfa88;
   padding: 5px;
 }
 
@@ -170,6 +244,20 @@ h5 {
   font-family: "PT Sans", sans-serif;
   border: 2px solid #4caf50;
   box-shadow: 0px 0px 5px 7px #4caf50;
+  padding: 5px;
+}
+
+.activeAction {
+  font-size: 13px;
+  transform: translate(5%, 5%);
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #272525;
+  color: #d8d8d8;
+  font-family: "PT Sans", sans-serif;
+  border: 2px solid #fcfa88;
+  box-shadow: 0px 0px 5px 7px #fcfa88;
   padding: 5px;
 }
 
