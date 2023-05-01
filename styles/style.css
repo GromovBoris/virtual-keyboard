@@ -87,8 +87,8 @@ h5 {
   background-color: black;
   margin: 20px;
   box-shadow: 0 0 5px 4px #4caf50;
-  min-width: 765px;
-  min-height: 200px;
+  max-width: 900px;
+  max-height: 300px;
   font-size: 22px;
   font-family: "PT Sans", sans-serif;
   resize: none;
@@ -101,14 +101,14 @@ h5 {
 }
 
 .rick {
-  min-width: 200px;
-  min-height: 800px;
+  max-width: 300px;
+  max-height: 900px;
 }
 
 .mortie {
   justify-self: end;
-  min-width: 200px;
-  min-height: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .keyboard {
@@ -120,8 +120,8 @@ h5 {
   border: 2px solid #4caf50;
   padding: 10px;
   border-radius: 10px;
-  min-height: 265px;
-  min-width: 765px;
+  max-height: 265px;
+  max-width: 765px;
   box-shadow: 0 0 5px 2px #4caf50;
 }
 
