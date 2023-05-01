@@ -602,12 +602,14 @@ let buttonKeys = [
   },
 ];
 
-// ЗАПОЛНЕНИЕ ЗНАЧЕНИЙ BUTTON БАЗОВЫМИ ЗНАЧЕНИЯМИ (en_down)
-
-const button = document.querySelectorAll(".button");
+// ПЕРЕМЕННЫЙ АКТУАЛЬНОГО ЯЗЫКА И РЕГИСТРА
 
 let lang;
 let cplck;
+
+// ЗАПОЛНЕНИЕ ЗНАЧЕНИЙ BUTTON БАЗОВЫМИ ЗНАЧЕНИЯМИ (en_down)
+
+const button = document.querySelectorAll(".button");
 
 button.forEach((button) => {
   for (let i = 0; i < buttonKeys.length; i++) {
@@ -848,4 +850,33 @@ backSpace.addEventListener("click", () => {
   let currentValue = textArea.value;
   textArea.value = currentValue.substring(0, currentValue.length - 1);
   document.querySelector("textarea").focus();
+});
+
+// РЕАЛИЗАЦИЯ КНОПКИ DELETE
+
+const del = document.getElementById("buttonDel");
+
+del.addEventListener("click", () => {
+  let currentValue = textArea.value;
+  let cursorPosition = textArea.selectionStart;
+  if (cursorPosition < currentValue.length) {
+    textArea.value =
+      currentValue.substring(0, cursorPosition) +
+      currentValue.substring(cursorPosition + 1);
+    document.querySelector("textarea").focus();
+    textArea.setSelectionRange(cursorPosition, cursorPosition);
+  }
+});
+
+textArea.addEventListener("keydown", (event) => {
+  if (event.key === 46) {
+    let currentValue = textArea.value;
+    let cursorPosition = textArea.selectionStart;
+    if (cursorPosition < currentValue.length) {
+      textArea.value =
+        currentValue.substring(0, cursorPosition) +
+        currentValue.substring(cursorPosition + 1);
+      textArea.setSelectionRange(cursorPosition, cursorPosition);
+    }
+  }
 });
