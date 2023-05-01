@@ -842,7 +842,7 @@ document.addEventListener("keydown", (event) => {
 
 // РЕАЛИЗАЦИЯ КНОПКИ BACKSPACE
 
-const backSpace = ocument.getElementById("buttonBackspace");
+const backSpace = document.getElementById("buttonBackspace");
 
 backSpace.addEventListener("click", () => {
   let currentValue = textArea.value;
