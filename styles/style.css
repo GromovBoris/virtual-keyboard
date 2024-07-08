@@ -22,8 +22,8 @@ html {
 body {
   position: relative;
   font-family: "Roboto", sans-serif;
-  background-color: #ffffff;
-  color: #333;
+/*   background-color: #ffffff;
+  color: #333; */
   margin: 0;
   padding: 0;
 }
