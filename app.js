@@ -8,7 +8,7 @@ function keyboardCreate() {
   const wrapper = document.querySelector(".wrapper");
   wrapper.insertAdjacentHTML(
     "afterbegin",
-    "<div class='header'><h1>RSS Virtual Keyboard 3023q1</h1><h5>Created on Win. Switch languages by left Shift+Alt</h5></div>"
+    "<div class='header'><h1>RSS Virtual Keyboard</h1><div class='sound'><label class='mute-toggle'><input type='checkbox' id='mute_checkbox'><span class='slider'></span><span class='mute-label'></label></span><h5>Sound</h5></div><h5>Switch languages by left Shift+Alt</h5></div>"
   );
   wrapper.insertAdjacentHTML("beforeend", "<div class='container'></div>");
   const container = document.querySelector(".container");
@@ -542,7 +542,6 @@ button.forEach((button) => {
 const capsLockClick = document.getElementById("buttonCapsLock");
 
 capsLockClick.addEventListener("click", () => {
-  audio.play();
   if (cplck === "down" && lang === "en") {
     button.forEach((button) => {
       capsLockKeydown.style.border = "2px solid #fa6cf3";
@@ -604,7 +603,6 @@ const capsLockKeydown = document.getElementById("buttonCapsLock");
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "CapsLock") {
-    audio.play();
     if (cplck === "down" && lang === "en") {
       capsLockKeydown.style.border = "2px solid #fa6cf3";
       capsLockKeydown.style.boxShadow = "0px 0px 2px 4px #fa6cf3";
@@ -666,14 +664,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// ДОБАВЛЯЕМ В BUTTON ЗВУК
-
-document.querySelectorAll("button").forEach(function (button) {
-  button.setAttribute("onclick", "playSound()");
-});
-
-let audio = new Audio("sounds/key.mp3");
-
 // ВВОД ЗНАЧЕНИЙ В TEXTAREA
 
 const symbolPrint = document.querySelectorAll(".symbol, .gobutton");
@@ -683,7 +673,6 @@ symbolPrint.forEach((element) => {
   element.addEventListener("click", () => {
     let value = element.textContent;
     textArea.value += value;
-    audio.play();
     document.querySelector("textarea").focus();
   });
 });
@@ -692,7 +681,7 @@ symbolPrint.forEach((element) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.getModifierState("Shift") && event.getModifierState("Alt")) {
-    audio.play();
+    playSound();
     if (lang === "en" && cplck === "down") {
       button.forEach((button) => {
         for (let i = 0; i < buttonKeys.length; i++) {
@@ -748,7 +737,7 @@ document.addEventListener("keydown", (event) => {
 // нажимаем
 
 document.addEventListener("keydown", (event) => {
-  audio.play();
+  playSound();
   for (let y = 0; y < buttonKeys.length; y++) {
     if (event.key == buttonKeys[y].en_down) {
       let elem = document.getElementById(buttonKeys[y].value);
@@ -789,7 +778,6 @@ document.addEventListener("keyup", (event) => {
 const enterKey = document.getElementById("buttonEnter");
 
 enterKey.addEventListener("click", () => {
-  audio.play();
   textArea.value += "\n";
   document.querySelector("textarea").focus();
 });
@@ -801,7 +789,6 @@ const tabKey = document.getElementById("buttonTab");
 // по клику
 
 tabKey.addEventListener("click", () => {
-  audio.play();
   textArea.value += "    ";
   document.querySelector("textarea").focus();
 });
@@ -809,6 +796,7 @@ tabKey.addEventListener("click", () => {
 // по нажатию
 
 document.addEventListener("keydown", (event) => {
+  playSound();
   if (event.key === "Tab") {
     textArea.value += "    ";
     document.querySelector("textarea").focus();
@@ -820,7 +808,6 @@ document.addEventListener("keydown", (event) => {
 const backSpace = document.getElementById("buttonBackspace");
 
 backSpace.addEventListener("click", () => {
-  audio.play();
   let currentValue = textArea.value;
   textArea.value = currentValue.substring(0, currentValue.length - 1);
   document.querySelector("textarea").focus();
@@ -833,7 +820,6 @@ const del = document.getElementById("buttonDel");
 // по клику
 
 del.addEventListener("click", () => {
-  audio.play();
   let currentValue = textArea.value;
   let cursorPosition = textArea.selectionStart;
   if (cursorPosition < currentValue.length) {
@@ -874,3 +860,56 @@ document.addEventListener("keypress", (event) => {
     });
   }
 });
+
+// УБИРАЕМ ЭЛЕМЕНТЫ С КАРТИНКАМИ ПРИ МЕДИА б650
+
+const rick = document.querySelector(".rick");
+const mortie = document.querySelector(".mortie");
+const container = document.querySelector(".container");
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth < 990) {
+    const elements = [rick, mortie];
+    elements.forEach((element) => {
+      element.remove();
+    });
+  }
+});
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 989) {
+    container.prepend(rick);
+    container.append(mortie);
+  }
+});
+
+// ОТКЛЮЧЕНИЕ-ВКЛЮЧЕНИЕ ЗВУКА
+
+let soundEnabled = true;
+
+const soundChecker = () => {
+  const muteCheckbox = document.getElementById("mute_checkbox");
+
+  muteCheckbox.addEventListener("change", () => {
+    if (muteCheckbox.checked) {
+      soundEnabled = false;
+    } else {
+      soundEnabled = true;
+    }
+  });
+};
+
+const playSound = () => {
+  if (soundEnabled) {
+    const audio = new Audio("sounds/key.mp3");
+    audio.play();
+  }
+};
+
+document.querySelectorAll("button").forEach(function (button) {
+  button.addEventListener("click", () => {
+    playSound();
+  });
+});
+
+soundChecker();
